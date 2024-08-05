@@ -13,9 +13,11 @@ URSTRING="\/u\/home\/\$USERINIT\/\$USERNAME\/.local\/bin\/submit_gaussian16_hoot
 mkdir -p "$DIR"
 cd "$DIR"
 
-# Get the Git
+# Get the Git and put files in the right place
 git clone https://github.com/Natoooh/HoffmanDFT_Gauss
-
+cd HoffmanDFT_Gauss
+rm -rf .git
+mv * ..
 
 for file in *; do
   if [[ -f "$file" ]]; then
