@@ -28,6 +28,7 @@ done
 for file in *; do
 	if [[ -f "$file" ]]; then
 		dos2unix $file
+  		chmod 777 $file
 	fi
 done
 
